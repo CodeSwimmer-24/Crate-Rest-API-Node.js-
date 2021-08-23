@@ -1,0 +1,20 @@
+{
+  "name": "rest-shop",
+  "version": "1.0.0",
+  "description": "Node js RESTFUL API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git remote add origin https://github.com/CodeSwimmer-24/Crate-Rest-API-Node.js-.git"
+  },
+  "keywords": [
+    "node",
+    "restful",
+    "api"
+  ],
+  "author": "Fahad",
+  "license": "ISC"
+}
