@@ -1,0 +1,10 @@
+                    / Our API 
+
+
+    /products                             /order
+
+GET / POST                              GET / POST 
+    
+    /products/{id}                       /orders/{id}
+                                         
+GET / POST / DELETE                    GET / DELETE
