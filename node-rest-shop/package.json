@@ -16,5 +16,8 @@
     "api"
   ],
   "author": "Fahad",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
