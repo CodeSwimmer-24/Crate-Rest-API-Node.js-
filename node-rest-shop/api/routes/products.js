@@ -8,10 +8,25 @@ router.get('/',(req,res,next) => {
     // res.status(200).json({
     //     message:"Handling GET request to /products"
     // });
-    Product.find().exec().then(docs => {
-        console.log(docs);
-        res.status(200).json(docs);
-    }).catch(err => {
+        // console.log(docs);
+        Product.find().select("name price_id").exec().then(docs => {
+            const response ={
+                count : docs.length,
+                products : docs.map(doc => {
+                    return {
+                        name: doc.name,
+                        price: doc.price,
+                        _id:doc._id,
+                       request:{
+                           tye:'GET',
+                           url:'http://localhost:3000/products/'+doc._id
+                       }
+                    }
+                })
+            };
+            res.status(200).json(response);
+        })
+    .catch(err => {
         console.log(err);
         res.status(500).json({
             error:err
