@@ -6,7 +6,7 @@ const Order = require("../models/order");
 const Product = require("../models/product");
 
 router.get('/',(req,res,next) => {
-   Order.find().exec().then(docs => {
+   Order.find().select("_id product quantity").exec().then(docs => {
     const response ={
         count : docs.length,
         products : docs.map(doc => {

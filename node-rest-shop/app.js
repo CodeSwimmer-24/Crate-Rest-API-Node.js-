@@ -39,6 +39,8 @@ mongoose.connect('mongodb+srv://ProfileView:gGQcvSNCgQk5n6c@cluster0.vbnfg.mongo
 
 app.use(morgan('dev'));
 
+app.use('/uploads',express.static('uploads'))
+
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 
