@@ -37,7 +37,7 @@ router.get('/',(req,res,next) => {
         Product.find().select("name price_id productImage").exec().then(docs => {
             const response ={
                 count : docs.length,
-                products : docs.map(doc => {
+                products : docs.map(doc => { 
                     return {
                         name: doc.name,
                         price: doc.price,
